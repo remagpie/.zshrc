@@ -1,0 +1,79 @@
+# Bootstrap zgen
+if ! [ -e ${ZDOTDIR}/zgen ]; then
+	git clone https://github.com/tarjoilija/zgen.git ${ZDOTDIR}/zgen
+fi
+
+ZGEN_DIR=${ZDOTDIR}/zgen
+ZGEN_AUTOLOAD_COMPINIT=0
+source ${ZDOTDIR}/zgen/zgen.zsh
+
+if ! zgen saved; then
+	zgen load zsh-users/zsh-autosuggestions
+	zgen load zsh-users/zsh-syntax-highlighting
+	zgen save
+fi
+
+# Make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+        function zle-line-init () {
+                echoti smkx
+        }
+        function zle-line-finish () {
+                echoti rmkx
+        }
+        zle -N zle-line-init
+        zle -N zle-line-finish
+fi
+
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+typeset -A key
+key[Home]=${terminfo[khome]}
+key[End]=${terminfo[kend]}
+key[Insert]=${terminfo[kich1]}
+key[Delete]=${terminfo[kdch1]}
+key[Up]=${terminfo[kcuu1]}
+key[Down]=${terminfo[kcud1]}
+key[Left]=${terminfo[kcub1]}
+key[Right]=${terminfo[kcuf1]}
+key[PageUp]=${terminfo[kpp]}
+key[PageDown]=${terminfo[knp]}
+
+bindkey -v
+[[ -n "${key[Home]}"   ]] && bindkey "${key[Home]}"   beginning-of-line
+[[ -n "${key[End]}"    ]] && bindkey "${key[End]}"    end-of-line
+[[ -n "${key[Delete]}" ]] && bindkey "${key[Delete]}" delete-char
+[[ -n "${key[Up]}"     ]] && bindkey "${key[Up]}"     up-line-or-beginning-search
+[[ -n "${key[Down]}"   ]] && bindkey "${key[Down]}"   down-line-or-beginning-search
+[[ -n "${key[Left]}"   ]] && bindkey "${key[Left]}"   backward-char
+[[ -n "${key[Right]}"  ]] && bindkey "${key[Right]}"  forward-char
+
+setopt autopushd pushdignoredups pushdminus pushdsilent pushdtohome
+DIRSTACKSIZE=20
+
+setopt listrowsfirst
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+
+autoload -Uz colors && colors
+NEWLINE=$'\n'
+PROMPT="[%{$fg[red]%}%n%{$reset_color%}]%{$fg[cyan]%}%~${NEWLINE}%{$reset_color%}%{$fg[magenta]%}%#%{$reset_color%}"
+RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
+
+setopt histignoredups incappendhistory
+HISTFILE=${ZDOTDIR}/.zshhist
+HISTSIZE=1000
+SAVEHIST=1000
+
+REPORTTIME=20
+
+export EDITOR=nvim
+
+alias ls='ls --color=auto'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
