@@ -10,6 +10,7 @@ source ${ZDOTDIR}/zgen/zgen.zsh
 if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
 	zgen load zsh-users/zsh-syntax-highlighting
+	zgen load ${ZDOTDIR}/plugins/quote
 	zgen save
 fi
 

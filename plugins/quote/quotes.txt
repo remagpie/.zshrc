@@ -1,0 +1,6 @@
+Benjamin Brewster|In theory there is no difference between theory and practice. In practice there is.
+Linus Torvalds		|If you think your users are idiots, only idiots will use it.
+Linus Torvalds		|Intelligence is the ability to avoid doing work, yet getting the work done.
+Peter Drucker		|The best way to predict the future is to create it.
+Phil Karton		|There are only two hard things in Computer Science: cache invalidation and naming things.
+Stephen Hawking		|The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.
