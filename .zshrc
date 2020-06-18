@@ -74,8 +74,19 @@ REPORTTIME=20
 
 export EDITOR=nvim
 
-alias ls='ls --color=auto'
-alias diff='diff --color=auto'
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+case $OSTYPE in
+	linux*)
+		alias ls='ls --color=auto'
+		alias diff='diff --color=auto'
+		alias grep='grep --color=auto'
+		alias egrep='egrep --color=auto'
+		alias fgrep='fgrep --color=auto'
+		;;
+	darwin*)
+		if [ -x $(command -v gls) ]; then
+			alias ls='gls --color=auto'
+		else
+			alias ls='ls -G'
+		fi
+		;;
+esac
