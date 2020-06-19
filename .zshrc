@@ -72,6 +72,10 @@ SAVEHIST=1000
 
 REPORTTIME=20
 
+function calc() {
+	echo "$@" | bc -l | sed -E 's/([1-9])0+$/\1/' | sed -E 's/\.0+$//' | sed -E 's/^\./0\./'
+}
+
 export EDITOR=nvim
 
 case $OSTYPE in
@@ -90,3 +94,5 @@ case $OSTYPE in
 		fi
 		;;
 esac
+	echo "$@"
+aliases[=]="noglob calc"
