@@ -1,9 +1,9 @@
 # Bootstrap zgen
-if ! [ -e ${ZDOTDIR}/zgen ]; then
+if ! [ -e "${ZDOTDIR}/zgen" ]; then
 	git clone https://github.com/tarjoilija/zgen.git ${ZDOTDIR}/zgen
 fi
 
-ZGEN_DIR=${ZDOTDIR}/zgen
+ZGEN_DIR="${ZDOTDIR}/zgen"
 ZGEN_AUTOLOAD_COMPINIT=0
 source ${ZDOTDIR}/zgen/zgen.zsh
 
@@ -33,16 +33,16 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 typeset -A key
-key[Home]=${terminfo[khome]}
-key[End]=${terminfo[kend]}
-key[Insert]=${terminfo[kich1]}
-key[Delete]=${terminfo[kdch1]}
-key[Up]=${terminfo[kcuu1]}
-key[Down]=${terminfo[kcud1]}
-key[Left]=${terminfo[kcub1]}
-key[Right]=${terminfo[kcuf1]}
-key[PageUp]=${terminfo[kpp]}
-key[PageDown]=${terminfo[knp]}
+key[Home]="${terminfo[khome]}"
+key[End]="${terminfo[kend]}"
+key[Insert]="${terminfo[kich1]}"
+key[Delete]="${terminfo[kdch1]}"
+key[Up]="${terminfo[kcuu1]}"
+key[Down]="${terminfo[kcud1]}"
+key[Left]="${terminfo[kcub1]}"
+key[Right]="${terminfo[kcuf1]}"
+key[PageUp]="${terminfo[kpp]}"
+key[PageDown]="${terminfo[knp]}"
 
 bindkey -v
 [[ -n "${key[Home]}"   ]] && bindkey "${key[Home]}"   beginning-of-line
@@ -66,7 +66,7 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}]%{$fg[cyan]%}%~${NEWLINE}%{$reset_color%
 RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 setopt histignoredups incappendhistory
-HISTFILE=${ZDOTDIR}/.zshhist
+HISTFILE="${ZDOTDIR}/.zshhist"
 HISTSIZE=1000
 SAVEHIST=1000
 
