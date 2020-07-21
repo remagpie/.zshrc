@@ -97,3 +97,7 @@ case $OSTYPE in
 esac
 	echo "$@"
 aliases[=]="noglob calc"
+
+if [ -d "$HOME/.cargo" ]; then
+	source ~/.cargo/env
+fi
