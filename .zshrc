@@ -77,6 +77,7 @@ function calc() {
 }
 
 export EDITOR=nvim
+export GIT_PAGER='less -R -X -F'
 
 case $OSTYPE in
 	linux*)
