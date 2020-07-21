@@ -98,6 +98,8 @@ esac
 	echo "$@"
 aliases[=]="noglob calc"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 if [ -d "$HOME/.cargo" ]; then
 	source ~/.cargo/env
 fi
