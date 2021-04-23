@@ -104,3 +104,8 @@ export PATH="$HOME/.local/bin:$PATH"
 if [ -d "$HOME/.cargo" ]; then
 	source ~/.cargo/env
 fi
+
+if [ -d "$HOME/.fnm" ]; then
+	export PATH="$HOME/.fnm:$PATH"
+	eval "`fnm env`"
+fi
