@@ -12,6 +12,7 @@ if ! zgen saved; then
 	zgen load zsh-users/zsh-syntax-highlighting
 	zgen load ${ZDOTDIR}/plugins/quote
 	zgen load ${ZDOTDIR}/plugins/title
+	zgen load ${ZDOTDIR}/plugins/zhooks
 	zgen save
 fi
 
