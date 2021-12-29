@@ -33,6 +33,8 @@ autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
+disable r
+
 typeset -A key
 key[Home]="${terminfo[khome]}"
 key[End]="${terminfo[kend]}"
