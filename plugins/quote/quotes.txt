@@ -1,6 +1,25 @@
-Benjamin Brewster|In theory there is no difference between theory and practice. In practice there is.
+Anonymous		|The definition of insanity is doing the same thing over and over again and expecting a different result.
+Antoine de Saint-Exupery|Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.
+Benjamin Brewster	|In theory there is no difference between theory and practice. In practice there is.
+Bill Clinton		|Considering the current sad state of our computer programs, software development is clearly still a black art, and cannot yet be called an engineering discipline.
+Bill Gates		|Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
+Bjarne Stroustrup	|There are only two kinds of programming languages: those people always bitch about and those nobody uses.
+Brian Kernighan		|Controlling complexity is the essence of computer programming.
+Donald Knuth		|Premature optimization is the root of all evil.
+Grady Booch		|The function of good software is to make the complex appear to be simple.
+Harold Abelson		|Programs must be written for people to read, and only incidentally for machines to execute.
+John Johnson		|First, solve the problem. Then, write the code.
+Kent Beck		|I'm not a great programmer; I'm just a good programmer with great habits.
+Kent Beck		|Optimism is an occupational hazard of programming; feedback is the treatment.
 Linus Torvalds		|If you think your users are idiots, only idiots will use it.
 Linus Torvalds		|Intelligence is the ability to avoid doing work, yet getting the work done.
+Martin Fowler		|Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+Mosher's Law		|Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.
 Peter Drucker		|The best way to predict the future is to create it.
 Phil Karton		|There are only two hard things in Computer Science: cache invalidation and naming things.
+Ralph Johnson		|Before software can be reusable it first has to be usable.
+Ryan Singer		|So much complexity in software comes from trying to make one thing do two things.
 Stephen Hawking		|The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.
+Steve McConnell		|Good code is its own best documentation.
+Tony Hoare		|There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.
+Vidiu Platon		|I don’t care if it works on your machine!  We are not shipping your machine!
