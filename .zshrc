@@ -10,6 +10,7 @@ source ${ZDOTDIR}/zgen/zgen.zsh
 if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
 	zgen load zsh-users/zsh-syntax-highlighting
+	zgen load ${ZDOTDIR}/plugins/git
 	zgen load ${ZDOTDIR}/plugins/quote
 	zgen load ${ZDOTDIR}/plugins/title
 	zgen load ${ZDOTDIR}/plugins/zhooks
@@ -80,7 +81,6 @@ function calc() {
 }
 
 export EDITOR=nvim
-export GIT_PAGER='less -R -X -F'
 
 case $OSTYPE in
 	linux*)
@@ -98,7 +98,6 @@ case $OSTYPE in
 		fi
 		;;
 esac
-	echo "$@"
 aliases[=]="noglob calc"
 
 export PATH="$HOME/.local/bin:$PATH"
