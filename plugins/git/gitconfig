@@ -1,0 +1,13 @@
+[alias]
+	a = add
+	b = branch
+	c = commit -am
+	cc = commit
+	d = diff
+	f = fetch
+	l = log --oneline
+	ll = log
+	p = push
+	r = rebase
+	s = status
+	w = switch
