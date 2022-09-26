@@ -3,6 +3,7 @@
 	b = branch
 	c = commit -am
 	cc = commit
+        cam = commit --am --no-e
 	d = diff
 	f = fetch
 	l = log --oneline
@@ -11,3 +12,6 @@
 	r = rebase
 	s = status
 	w = switch
+
+[include]
+	path = gitconfig.dynamic

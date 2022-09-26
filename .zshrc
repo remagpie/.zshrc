@@ -3,9 +3,17 @@ if ! [ -e "${ZDOTDIR}/zgen" ]; then
 	git clone https://github.com/tarjoilija/zgen.git ${ZDOTDIR}/zgen
 fi
 
+case $OSTYPE in
+	darwin*)
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+		;;
+esac
+export PATH="$HOME/.local/bin:$PATH"
+
 ZGEN_DIR="${ZDOTDIR}/zgen"
 ZGEN_AUTOLOAD_COMPINIT=0
 source ${ZDOTDIR}/zgen/zgen.zsh
+
 
 if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
@@ -52,9 +60,8 @@ RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 setopt histignoredups incappendhistory
 HISTFILE="${ZDOTDIR}/.zshhist"
-HISTSIZE=1000
-SAVEHIST=1000
-
+HISTSIZE=10000
+SAVEHIST=10000
 REPORTTIME=20
 
 function calc() {
@@ -87,7 +94,7 @@ if [ -d "$HOME/.cargo" ]; then
 	source ~/.cargo/env
 fi
 
-if [ -d "$HOME/.fnm" ]; then
-	export PATH="$HOME/.fnm:$PATH"
-	eval "`fnm env`"
-fi
+case $OSTYPE in
+	linux*) if [ -d "$HOME/.fnm" ]; then eval "`fnm env`"; fi;;
+	darwin*) if type fnm > /dev/null; then eval "`fnm env`"; fi;;
+esac
