@@ -6,12 +6,17 @@
         cam = commit --am --no-e
 	d = diff
 	f = fetch
-	l = log --oneline
+	l = log --oneline -20
 	ll = log
 	p = push
+	po = push origin HEAD
+	pof = push origin HEAD -f
 	r = rebase
 	s = status
+	u = pull
+	ur = pull -r
 	w = switch
+	wc = switch -c
 
 [include]
 	path = gitconfig.dynamic
