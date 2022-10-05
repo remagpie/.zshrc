@@ -1,19 +1,30 @@
 Anonymous		|The definition of insanity is doing the same thing over and over again and expecting a different result.
+Abraham Maslow		|If all you have is a hammer, everything looks like a nail.
 Antoine de Saint-Exupery|Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.
+Arthur Clarke	|When a distinguished but elderly scientist states that something is possible, he/she is almost certainly right. When he/she states that something is impossible, he/she is very probably wrong.
+Arthur Clarke	|The only way of discovering the limits of the possible is to venture a little way past them into the impossible.
+Arthur Clarke	|Any sufficiently advanced technology is indistinguishable from magic.
 Benjamin Brewster	|In theory there is no difference between theory and practice. In practice there is.
 Bill Clinton		|Considering the current sad state of our computer programs, software development is clearly still a black art, and cannot yet be called an engineering discipline.
 Bill Gates		|Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
 Bjarne Stroustrup	|There are only two kinds of programming languages: those people always bitch about and those nobody uses.
 Brian Kernighan		|Controlling complexity is the essence of computer programming.
 Donald Knuth		|Premature optimization is the root of all evil.
+Douglas Hofstadter	|It always takes longer than you expect, even when you take into account Hofstadter's Law.
+Fred Brooks		|Adding manpower to a late software project makes it later.
+Gerald Weinberg		|No matter how it looks at first, it's always a people problem.
+Gilbert Chesterton	|Don't ever take a fence down until you know the reason why it was put up.
 Grady Booch		|The function of good software is to make the complex appear to be simple.
 Harold Abelson		|Programs must be written for people to read, and only incidentally for machines to execute.
 John Johnson		|First, solve the problem. Then, write the code.
 Kent Beck		|I'm not a great programmer; I'm just a good programmer with great habits.
 Kent Beck		|Optimism is an occupational hazard of programming; feedback is the treatment.
+Laurence Peter		|Every employee tends to rise to his level of incompetence.
 Linus Torvalds		|If you think your users are idiots, only idiots will use it.
 Linus Torvalds		|Intelligence is the ability to avoid doing work, yet getting the work done.
 Martin Fowler		|Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+Marilyn Strathern	|When a measure becomes a target, it ceases to be a good measure.
+Melvin E. Conway	|Any organization that designs a system will produce a design whose structure is a copy of the organization's communication structure.
 Mosher's Law		|Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.
 Peter Drucker		|The best way to predict the future is to create it.
 Phil Karton		|There are only two hard things in Computer Science: cache invalidation and naming things.
