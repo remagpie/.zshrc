@@ -70,8 +70,23 @@ function calc() {
 
 export EDITOR=nvim
 
+function __fallback_cmd {
+	local arg
+	for arg in $@; do
+		local cmd=${arg%% *}
+		if command -v $cmd &> /dev/null; then
+			echo "$arg"
+			break
+		fi
+	done
+}
+
 case $OSTYPE in
 	linux*)
+		alias l="$(__fallback_cmd	'lsd'		'ls --color')"
+		alias la="$(__fallback_cmd	'lsd -A'	'ls --color -A')"
+		alias ll="$(__fallback_cmd	'lsd -l'	'ls --color -lh')"
+		alias lla="$(__fallback_cmd	'lsd -lA'	'ls --color -lhA')"
 		alias ls='ls --color=auto'
 		alias diff='diff --color=auto'
 		alias grep='grep --color=auto'
@@ -79,11 +94,11 @@ case $OSTYPE in
 		alias fgrep='fgrep --color=auto'
 		;;
 	darwin*)
-		if [ -x $(command -v gls) ]; then
-			alias ls='gls --color=auto'
-		else
-			alias ls='ls -G'
-		fi
+		alias l="$(__fallback_cmd	'lsd'		'gls --color'		'ls -G')"
+		alias la="$(__fallback_cmd	'lsd -A'	'gls --color -A'	'ls -Ga')"
+		alias ll="$(__fallback_cmd	'lsd -l'	'gls --color -lh'	'ls -Gl')"
+		alias lla="$(__fallback_cmd	'lsd -lA'	'gls --color -lhA'	'ls -Gla')"
+		alias ls="$(__fallback_cmd	'gls --color=auto'	'ls -G')"
 		;;
 esac
 aliases[=]="noglob calc"
