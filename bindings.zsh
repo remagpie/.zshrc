@@ -32,5 +32,14 @@ bindkey -M remagpie "^[[200~" bracketed-paste
 [[ -n "${key[Down]}"   ]] && bindkey -M remagpie "${key[Down]}"   down-line-or-beginning-search
 [[ -n "${key[Left]}"   ]] && bindkey -M remagpie "${key[Left]}"   backward-char
 [[ -n "${key[Right]}"  ]] && bindkey -M remagpie "${key[Right]}"  forward-char
+bindkey -M remagpie "^[[1;3D" backward-word
+bindkey -M remagpie "^[[1;3C" forward-word
+
+bindkey -M remagpie "^J" backward-char
+bindkey -M remagpie "^L" forward-char
+bindkey -M remagpie "^[j" backward-word
+bindkey -M remagpie "^[l" forward-word
+bindkey -M remagpie "^[i" up-line-or-beginning-search
+bindkey -M remagpie "^[k" down-line-or-beginning-search
 
 bindkey -A remagpie main
