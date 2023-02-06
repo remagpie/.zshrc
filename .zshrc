@@ -45,6 +45,7 @@ zle -N down-line-or-beginning-search
 disable r
 
 source ${ZDOTDIR}/bindings.zsh
+source ${ZDOTDIR}/prompt.zsh
 
 setopt autopushd pushdignoredups pushdminus pushdsilent pushdtohome
 DIRSTACKSIZE=20
@@ -52,11 +53,6 @@ DIRSTACKSIZE=20
 setopt listrowsfirst
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
-
-autoload -Uz colors && colors
-NEWLINE=$'\n'
-PROMPT="[%{$fg[red]%}%n%{$reset_color%}]%{$fg[cyan]%}%~${NEWLINE}%{$reset_color%}%{$fg[magenta]%}%#%{$reset_color%}"
-RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 setopt histignoredups incappendhistory
 HISTFILE="${ZDOTDIR}/.zshhist"
