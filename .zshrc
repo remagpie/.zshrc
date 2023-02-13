@@ -109,3 +109,9 @@ case $OSTYPE in
 	linux*) if [ -d "$HOME/.fnm" ]; then eval "`$HOME/.fnm/fnm env`"; fi;;
 	darwin*) if type fnm > /dev/null; then eval "`fnm env`"; fi;;
 esac
+
+if type zoxide > /dev/null; then
+	_ZO_DATA_DIR="${ZDOTDIR}/.zoxide"
+	_ZO_MAXAGE=10000
+	eval "$(zoxide init --cmd j zsh)"
+fi
