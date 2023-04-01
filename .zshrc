@@ -19,6 +19,7 @@ if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
 	zgen load zsh-users/zsh-syntax-highlighting
 	zgen load ${ZDOTDIR}/plugins/git
+	zgen load ${ZDOTDIR}/plugins/history
 	zgen load ${ZDOTDIR}/plugins/quote
 	zgen load ${ZDOTDIR}/plugins/title
 	zgen load ${ZDOTDIR}/plugins/zhooks
@@ -53,12 +54,6 @@ DIRSTACKSIZE=20
 setopt listrowsfirst
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
-
-setopt histignoredups incappendhistory
-HISTFILE="${ZDOTDIR}/.zshhist"
-HISTSIZE=10000
-SAVEHIST=10000
-REPORTTIME=20
 
 function calc() {
 	echo "$@" | bc -l | sed -E 's/([1-9])0+$/\1/' | sed -E 's/\.0+$//' | sed -E 's/^\./0\./'
