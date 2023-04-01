@@ -105,6 +105,10 @@ case $OSTYPE in
 	darwin*) if type fnm > /dev/null; then eval "`fnm env`"; fi;;
 esac
 
+if [ -d "$HOME/.elan" ]; then
+	source "$HOME/.elan/env"
+fi
+
 if type zoxide > /dev/null; then
 	_ZO_DATA_DIR="${ZDOTDIR}/.zoxide"
 	_ZO_MAXAGE=10000
