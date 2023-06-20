@@ -14,10 +14,10 @@ ZGEN_DIR="${ZDOTDIR}/zgen"
 ZGEN_AUTOLOAD_COMPINIT=0
 source ${ZDOTDIR}/zgen/zgen.zsh
 
-
 if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
 	zgen load zsh-users/zsh-syntax-highlighting
+	zgen load ${ZDOTDIR}/plugins/autocomplete
 	zgen load ${ZDOTDIR}/plugins/git
 	zgen load ${ZDOTDIR}/plugins/history
 	zgen load ${ZDOTDIR}/plugins/quote
@@ -51,7 +51,7 @@ source ${ZDOTDIR}/prompt.zsh
 setopt autopushd pushdignoredups pushdminus pushdsilent pushdtohome
 DIRSTACKSIZE=20
 
-setopt listrowsfirst
+setopt LIST_ROWS_FIRST
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 

@@ -1,0 +1,7 @@
+#compdef -command-
+
+local -P ret=1
+if _autocd "$@"; then
+	ret=0
+fi
+return ret

@@ -16,7 +16,7 @@ bindkey -M remagpie "^J" accept-line
 bindkey -M remagpie "^M" accept-line
 
 bindkey -M remagpie "^H" backward-char
-bindkey -M remagpie "^I" expand-or-complete
+bindkey -M remagpie "^I" menu-select
 bindkey -M remagpie "^L" clear-screen
 bindkey -M remagpie "^M" accept-line
 bindkey -M remagpie "^U" kill-whole-line
