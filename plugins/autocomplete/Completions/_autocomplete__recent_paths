@@ -41,8 +41,8 @@ _autocomplete__recent_paths_add() {
 
 	# Work around `setopt autonamedirs` by not assigning absolute paths to scalars.
 	while (( $#matches )); do
-		if (( $#displ[1] > 1 )); then
-			compadd "$expl[@]" -d displ -P "${${(D)matches[1]:h}%/}/" -fW "${${matches[1]:h}%/}/" \
+		(( $#displ[1] > 1 )) &&
+				compadd "$expl[@]" -d displ -P "${${(D)matches[1]:h}%/}/" -fW "${${matches[1]:h}%/}/" \
 							-- "$matches[1]:t" &&
 						ret=0
 		shift -- displ matches

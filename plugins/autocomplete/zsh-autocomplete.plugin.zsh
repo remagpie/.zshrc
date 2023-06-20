@@ -11,8 +11,6 @@ unsetopt listbeep
 	)
 	setopt $_autocomplete__func_opts[@]
 
-	typeset -ga _autocomplete__funcfiletrace=( $funcfiletrace )
-
 	local basedir=${${(%):-%x}:P:h}
 	hash -d autocomplete=$basedir zsh-autocomplete=$basedir
 
