@@ -114,3 +114,7 @@ if type zoxide > /dev/null; then
 	_ZO_MAXAGE=10000
 	eval "$(zoxide init --cmd j zsh)"
 fi
+
+if type claude > /dev/null; then
+	alias claude='claude --continue'
+fi
