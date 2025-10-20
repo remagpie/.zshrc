@@ -101,7 +101,7 @@ if [ -d "$HOME/.cargo" ]; then
 fi
 
 case $OSTYPE in
-	linux*) if [ -d "$HOME/.fnm" ]; then eval "`$HOME/.fnm/fnm env`"; fi;;
+	linux*) if [ -d "$HOME/.local/share/fnm" ]; then eval "`$HOME/.local/share/fnm/fnm env`"; fi;;
 	darwin*) if type fnm > /dev/null; then eval "`fnm env`"; fi;;
 esac
 
