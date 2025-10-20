@@ -83,6 +83,10 @@ case $OSTYPE in
 		alias grep='grep --color=auto'
 		alias egrep='egrep --color=auto'
 		alias fgrep='fgrep --color=auto'
+
+		function open() {
+			( nohup xdg-open "$@" > /dev/null 2>&1 & )
+		}
 		;;
 	darwin*)
 		alias l="$(__fallback_cmd	'lsd'		'gls --color'		'ls -G')"
